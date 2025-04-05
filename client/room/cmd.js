@@ -1,5 +1,5 @@
 import { Chat, Players, Ui } from 'pixel_combats/room';
-
+try{
 function CommandManager(chatService) {
     this.chatService = chatService;
     this.commands = {};
@@ -130,10 +130,15 @@ cmd.addCommand("info", function(roomId, args, nick) {
     var playerCount = Players.All.length;
     cmd.showHint("Игроков онлайн: " + playerCount);
 });
-
+/* 
 cmd.addPermList("kick", [1, 2]);
 cmd.addBlackList("say");
 cmd.permUse("kick", 3, 300);
 cmd.limitedUse("info", 5);
 cmd.whiteList(4);
-cmd.blackList(5);
+cmd.blackList(5); */ 
+}catch(e){
+    Ui.GetContext().Hint.Value = 'команды наебнулсб';
+}
+
+
