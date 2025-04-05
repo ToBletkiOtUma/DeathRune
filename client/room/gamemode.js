@@ -3,7 +3,9 @@ import { Teams,Ui } from 'pixel_combats/room';
 try{
   Teams.Add('Player','<b>Синие</b>', new Color(0,0,1,0));
   Teams.Add('Player2','<b>Красные</b>', new Color(1,0,0,0));
+  Player.Spawns.SpawnPointsGroups.Add(1);
+  Player2.Spawns.SpawnPointsGroups.Add(2);
   
 }catch(e){
-  Ui.GetContext().Value = 'eror';
+  Ui.GetContext().Hint.Value = 'eror';
 }
